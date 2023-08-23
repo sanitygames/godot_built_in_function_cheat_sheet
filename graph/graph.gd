@@ -139,7 +139,7 @@ func _n2v(norm: Vector2) -> Vector2:
 	return Vector2(x, y)
 	
 func _p2n(pos: Vector2) -> Vector2:
-	var x = inverse_lerp(PIXEL_RECT.position.x, PIXEL_RECT.end.y, pos.x)
+	var x = inverse_lerp(PIXEL_RECT.position.x, PIXEL_RECT.end.x, pos.x)
 	var y = inverse_lerp(PIXEL_RECT.position.y, PIXEL_RECT.end.y, pos.y)
 	return Vector2(x, y)
 
