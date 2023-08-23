@@ -1,0 +1,134 @@
+[gd_scene load_steps=9 format=3 uid="uid://bevb13rydw0c5"]
+
+[ext_resource type="Script" path="res://graph_0/graph_0.gd" id="1_mrh6q"]
+[ext_resource type="Gradient" uid="uid://ci4qegbb71cwn" path="res://graph_0/graph_0_gradient.tres" id="2_wa2bv"]
+[ext_resource type="FontFile" uid="uid://bcndwmcjj3nfw" path="res://fonts/Roboto-LightItalic.ttf" id="3_xx1nb"]
+[ext_resource type="Shader" path="res://graph_0/graph.gdshader" id="4_exq64"]
+
+[sub_resource type="Environment" id="Environment_0ku62"]
+background_mode = 3
+glow_intensity = 1.11
+glow_strength = 1.37
+glow_blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_hdvfb"]
+offsets = PackedFloat32Array(0, 0.164336, 0.870629, 1)
+colors = PackedColorArray(0, 0, 0, 0.196078, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8d5em"]
+gradient = SubResource("Gradient_hdvfb")
+fill_to = Vector2(0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p5nlc"]
+shader = ExtResource("4_exq64")
+
+[node name="Graph" type="Node2D"]
+position = Vector2(164, -1)
+script = ExtResource("1_mrh6q")
+OFFSET = true
+GRAPH_RESOLUTION = 100
+GRID_COLOR_1 = Color(0.8, 0.8, 0.8, 1)
+GRID_COLOR_2 = Color(0.733333, 0.733333, 0.733333, 1)
+gradient = ExtResource("2_wa2bv")
+metadata/_edit_vertical_guides_ = [480.0]
+metadata/_edit_horizontal_guides_ = [250.0]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0ku62")
+
+[node name="YAxis" type="Line2D" parent="."]
+points = PackedVector2Array(0, 300, 0, -300)
+width = 8.0
+default_color = Color(0.813257, 0.813258, 0.813257, 1)
+
+[node name="XAxis" type="Line2D" parent="."]
+points = PackedVector2Array(-700, 0, 700, 0)
+width = 8.0
+default_color = Color(0.813257, 0.813258, 0.813257, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line" type="Line2D" parent="."]
+visible = false
+texture_filter = 3
+position = Vector2(-1577, -737)
+points = PackedVector2Array(-700, -259.808, -686, -235.108, -672, -205.364, -658, -171.214, -644, -133.391, -630, -92.7051, -616, -50.0306, -602, -6.28273, -588, 37.6, -574, 80.6759, -560, 122.021, -546, 160.748, -532, 196.026, -518, 227.099, -504, 253.298, -490, 274.064, -476, 288.949, -462, 297.634, -448, 299.934, -434, 295.799, -420, 285.317, -406, 268.714, -392, 246.345, -378, 218.691, -364, 186.344, -350, 150, -336, 110.437, -322, 68.5053, -308, 25.1034, -294, -18.8372, -280, -62.3735, -266, -104.572, -252, -144.526, -238, -181.38, -224, -214.342, -210, -242.705, -196, -265.861, -182, -283.313, -168, -294.686, -154, -299.737, -140, -298.357, -126, -290.575, -112, -276.559, -98, -256.609, -84, -231.154, -70, -200.739, -56, -166.017, -42, -127.734, -28, -86.7095, -14, -43.8249, 0, 0, 14, 43.8249, 28, 86.7095, 42, 127.734, 56, 166.017, 70, 200.739, 84, 231.154, 98, 256.609, 112, 276.559, 126, 290.575, 140, 298.357, 154, 299.737, 168, 294.686, 182, 283.313, 196, 265.861, 210, 242.705, 224, 214.342, 238, 181.38, 252, 144.526, 266, 104.572, 280, 62.3735, 294, 18.8372, 308, -25.1034, 322, -68.5053, 336, -110.437, 350, -150, 364, -186.344, 378, -218.691, 392, -246.345, 406, -268.714, 420, -285.317, 434, -295.799, 448, -299.934, 462, -297.634, 476, -288.949, 490, -274.064, 504, -253.298, 518, -227.099, 532, -196.026, 546, -160.748, 560, -122.021, 574, -80.6759, 588, -37.6, 602, 6.28273, 616, 50.0306, 630, 92.7051, 644, 133.391, 658, 171.214, 672, 205.364, 686, 235.108, 700, 259.808)
+width = 8.0
+gradient = ExtResource("2_wa2bv")
+texture = SubResource("GradientTexture2D_8d5em")
+texture_mode = 2
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -861.0
+offset_top = -452.0
+offset_right = -821.0
+offset_bottom = -412.0
+
+[node name="TextureRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_top = -8.0
+offset_right = 1773.0
+offset_bottom = 140.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect2" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 760.0
+offset_right = 1780.0
+offset_bottom = 908.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect3" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 1576.0
+offset_top = 54.0
+offset_right = 1779.0
+offset_bottom = 908.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect4" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = -55.0
+offset_top = 54.0
+offset_right = 148.0
+offset_bottom = 908.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -1066.0
+offset_top = 355.0
+offset_right = 1066.0
+offset_bottom = 489.0
+theme_override_colors/font_color = Color(0.929412, 0.929412, 0.929412, 1)
+theme_override_fonts/font = ExtResource("3_xx1nb")
+theme_override_font_sizes/font_size = 90
+text = "sin(x)"
+horizontal_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(102, 122)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_p5nlc")
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -960.0
+offset_top = -490.0
+offset_right = 960.0
+offset_bottom = 590.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
