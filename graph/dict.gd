@@ -22,6 +22,8 @@ var functions = {
 	"asin": {
 		"label": "asin(x)",
 		"func": func(x): return asin(x),
+		"scale_x": [-1, 1],
+		"scale_y": [-PI * 0.5, PI * 0.5]
 	},
 	"acos": {
 		"label": "acos(x)",
@@ -63,8 +65,8 @@ var functions = {
 	"abs": {
 		"label": "abs(x)",
 		"func": func(x): return abs(x),
-		"scale_x": [-0.5, 0.5],
-		"scale_y": [0.5],
+		"scale_x": [-3, 3],
+		"scale_y": [3],
 	},
 	"inverse_lerp": {
 		"label": "inverse_lerp(-0.5, 0.5, x)",
@@ -125,8 +127,8 @@ var functions = {
 		"scale_y": [1],
 	},
 	"snapped": {
-		"label": "snapped(x, 0.5)",
-		"func": func(x): return snapped(x, 0.5),
+		"label": "snapped(x, 0.3)",
+		"func": func(x): return snapped(x, 0.3),
 		"scale_x": [-1, 1],
 		"scale_y": [-1, 1],
 	},
@@ -137,6 +139,7 @@ var functions = {
 	"linear_to_db": {
 		"label": "linear_to_db(x)",
 		"func": func(x): return linear_to_db(x),
+		"scale_x": [1],
 	},
 	"cubic_interpolate": {
 		"label": "cubic_interpolate(0, 1, 0, 0, x)",
@@ -152,5 +155,17 @@ var functions = {
 		"scale_x": [-1, 1],
 		"scale_y": [1],
 	},
+	"wrap": {
+		"label": "wrap(x, 1, 3)",
+		"func": func(x): return wrap(x, 1, 3),
+		"scale_x": [-3, 3],
+		"scale_y": [-3, 3],
+	},
+	"rad_to_deg": {
+		"label": "rad_to_deg(x)",
+		"func": func(x): return rad_to_deg(x),
+		"scale_x": [-PI , PI ],
+		"scale_y": [-180, -90, 90, 180],
+	}
 
 }

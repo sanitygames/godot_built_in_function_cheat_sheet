@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cwxi0v14cv5vn"]
 
 [ext_resource type="Script" path="res://graph/graph.gd" id="1_3x312"]
-[ext_resource type="Gradient" uid="uid://ci4qegbb71cwn" path="res://graph_0/graph_0_gradient.tres" id="1_ds338"]
+[ext_resource type="Gradient" uid="uid://pggxldwswo41" path="res://graph/gradient.tres" id="2_gi7kx"]
 [ext_resource type="FontFile" uid="uid://d1wvn8afyulp3" path="res://fonts/Roboto-BoldItalic.ttf" id="3_tarvd"]
 [ext_resource type="Script" path="res://graph/dict.gd" id="3_uysoi"]
 
@@ -14,12 +14,6 @@ bg_color = Color(0, 0, 0, 1)
 
 [node name="Graph" type="Node2D"]
 script = ExtResource("1_3x312")
-GRAPH_RESOLUTION = 2000.0
-NAME = "sin"
-VALUE_MIN_X = -5.386
-VALUE_MAX_X = 5.386
-VALUE_MIN_Y = -1.25
-VALUE_MAX_Y = 1.25
 metadata/_edit_horizontal_guides_ = [310.0, 10.0, 360.0, 320.0]
 metadata/_edit_vertical_guides_ = [440.0, 430.0, 10.0]
 
@@ -30,7 +24,7 @@ script = ExtResource("3_uysoi")
 texture_filter = 6
 points = PackedVector2Array(10, 10, 127, 308, 219, 11, 324, 310, 385, 10, 430, 310)
 width = 5.0
-gradient = ExtResource("1_ds338")
+gradient = ExtResource("2_gi7kx")
 joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 2
