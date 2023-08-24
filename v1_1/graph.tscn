@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnnxxl7rj4bvq"]
+
+[ext_resource type="FontFile" uid="uid://d1wvn8afyulp3" path="res://fonts/Roboto-BoldItalic.ttf" id="1_1ckm4"]
+[ext_resource type="Environment" uid="uid://cutlchic5imiy" path="res://env.tres" id="3_uf05t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3fcr"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.376471, 0.376471, 0.376471, 1)
+
+[node name="Cotrol" type="Control"]
+custom_minimum_size = Vector2(480, 360)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_right = 1921.0
+offset_bottom = 1080.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+metadata/_edit_vertical_guides_ = [20.0, 660.0, 700.0]
+metadata/_edit_horizontal_guides_ = [0.0, 20.0, 500.0]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("3_uf05t")
+
+[node name="GraphManager" type="Panel" parent="."]
+clip_contents = true
+custom_minimum_size = Vector2(640, 480)
+layout_mode = 0
+offset_left = 19.0
+offset_top = 20.0
+offset_right = 659.0
+offset_bottom = 500.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_p3fcr")
+
+[node name="Line2D" type="Line2D" parent="GraphManager"]
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 511.0
+offset_right = 659.0
+offset_bottom = 543.0
+theme_override_colors/font_color = Color(0.819608, 0.819608, 0.819608, 1)
+theme_override_fonts/font = ExtResource("1_1ckm4")
+theme_override_font_sizes/font_size = 24
+text = "PLACEHOLDER_FUNCTION(VALUE1, VALUE2, VALUE3)"
+horizontal_alignment = 1

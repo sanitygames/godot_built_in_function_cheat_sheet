@@ -1,0 +1,75 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1qa4sn5hv4d7"]
+
+[ext_resource type="PackedScene" uid="uid://bnnxxl7rj4bvq" path="res://v1_1/graph.tscn" id="1_1p0i5"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+layer = 0
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_right = 1926.0
+offset_bottom = 1084.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 4
+
+[node name="Node2D" parent="GridContainer" instance=ExtResource("1_1p0i5")]
+layout_mode = 2
+metadata/_edit_vertical_guides_ = [480.0, 35.0, 470.0, 455.0]
+metadata/_edit_horizontal_guides_ = [360.0, 10.0, 290.0, 20.0, 310.0, 350.0]
+
+[node name="Node2D2" parent="GridContainer" instance=ExtResource("1_1p0i5")]
+layout_mode = 2
+metadata/_edit_vertical_guides_ = [480.0, 35.0, 470.0, 455.0]
+metadata/_edit_horizontal_guides_ = [360.0, 10.0, 290.0, 20.0, 310.0, 350.0]
+
+[node name="Node2D3" parent="GridContainer" instance=ExtResource("1_1p0i5")]
+layout_mode = 2
+metadata/_edit_vertical_guides_ = [480.0, 35.0, 470.0, 455.0]
+metadata/_edit_horizontal_guides_ = [360.0, 10.0, 290.0, 20.0, 310.0, 350.0]
+
+[node name="Node2D4" parent="GridContainer" instance=ExtResource("1_1p0i5")]
+layout_mode = 2
+metadata/_edit_vertical_guides_ = [480.0, 35.0, 470.0, 455.0]
+metadata/_edit_horizontal_guides_ = [360.0, 10.0, 290.0, 20.0, 310.0, 350.0]
+
+[node name="Node2D5" parent="GridContainer" instance=ExtResource("1_1p0i5")]
+layout_mode = 2
+metadata/_edit_vertical_guides_ = [480.0, 35.0, 470.0, 455.0]
+metadata/_edit_horizontal_guides_ = [360.0, 10.0, 290.0, 20.0, 310.0, 350.0]
+
+[node name="Node2D6" parent="GridContainer" instance=ExtResource("1_1p0i5")]
+layout_mode = 2
+metadata/_edit_vertical_guides_ = [480.0, 35.0, 470.0, 455.0]
+metadata/_edit_horizontal_guides_ = [360.0, 10.0, 290.0, 20.0, 310.0, 350.0]
+
+[node name="Node2D7" parent="GridContainer" instance=ExtResource("1_1p0i5")]
+layout_mode = 2
+metadata/_edit_vertical_guides_ = [480.0, 35.0, 470.0, 455.0]
+metadata/_edit_horizontal_guides_ = [360.0, 10.0, 290.0, 20.0, 310.0, 350.0]
+
+[node name="Node2D8" parent="GridContainer" instance=ExtResource("1_1p0i5")]
+layout_mode = 2
+metadata/_edit_vertical_guides_ = [480.0, 35.0, 470.0, 455.0]
+metadata/_edit_horizontal_guides_ = [360.0, 10.0, 290.0, 20.0, 310.0, 350.0]
+
+[node name="Node2D9" parent="GridContainer" instance=ExtResource("1_1p0i5")]
+layout_mode = 2
+metadata/_edit_vertical_guides_ = [480.0, 35.0, 470.0, 455.0]
+metadata/_edit_horizontal_guides_ = [360.0, 10.0, 290.0, 20.0, 310.0, 350.0]
+
+[node name="Node2D10" parent="GridContainer" instance=ExtResource("1_1p0i5")]
+layout_mode = 2
+metadata/_edit_vertical_guides_ = [480.0, 35.0, 470.0, 455.0]
+metadata/_edit_horizontal_guides_ = [360.0, 10.0, 290.0, 20.0, 310.0, 350.0]
+
+[node name="Node2D11" parent="GridContainer" instance=ExtResource("1_1p0i5")]
+layout_mode = 2
+metadata/_edit_vertical_guides_ = [480.0, 35.0, 470.0, 455.0]
+metadata/_edit_horizontal_guides_ = [360.0, 10.0, 290.0, 20.0, 310.0, 350.0]
+
+[node name="Node2D12" parent="GridContainer" instance=ExtResource("1_1p0i5")]
+layout_mode = 2
+metadata/_edit_vertical_guides_ = [480.0, 35.0, 470.0, 455.0]
+metadata/_edit_horizontal_guides_ = [360.0, 10.0, 290.0, 20.0, 310.0, 350.0]
