@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://blifju0wwvnj2"]
+[gd_scene load_steps=5 format=3 uid="uid://blifju0wwvnj2"]
 
 [ext_resource type="Gradient" uid="uid://c3p57aekj237i" path="res://v1_1/gradient.tres" id="1_30sal"]
 [ext_resource type="FontFile" uid="uid://d1wvn8afyulp3" path="res://fonts/Roboto-BoldItalic.ttf" id="1_baom7"]
+[ext_resource type="Script" path="res://v1_1/graph_manager.gd" id="1_pwj53"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4oy40"]
 bg_color = Color(0, 0, 0, 0)
@@ -17,6 +18,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 480.0
 offset_bottom = 360.0
+script = ExtResource("1_pwj53")
 metadata/_edit_lock_ = true
 metadata/_edit_vertical_guides_ = [480.0, 20.0, 460.0]
 metadata/_edit_horizontal_guides_ = [360.0, 20.0, 300.0]
@@ -29,6 +31,7 @@ offset_top = 20.0
 offset_right = 460.0
 offset_bottom = 300.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_4oy40")
+metadata/_edit_lock_ = true
 
 [node name="Graph" type="Line2D" parent="Panel"]
 points = PackedVector2Array(0, 0, 120, 200, 270, 90, 440, 280)
@@ -48,3 +51,4 @@ theme_override_colors/font_color = Color(0.796078, 0.796078, 0.796078, 1)
 theme_override_fonts/font = ExtResource("1_baom7")
 theme_override_font_sizes/font_size = 21
 text = "placeholder_function(value_x, value_y, value_z)"
+metadata/_edit_lock_ = true
