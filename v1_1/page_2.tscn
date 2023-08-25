@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c1qa4sn5hv4d7"]
+[gd_scene load_steps=5 format=3 uid="uid://btkmkq6quy6mx"]
 
-[ext_resource type="PackedScene" uid="uid://blifju0wwvnj2" path="res://v1_1/graph_manager.tscn" id="1_sy0yg"]
-[ext_resource type="Texture2D" uid="uid://cvu8qu6j5pdm1" path="res://godette.png" id="2_susy8"]
-[ext_resource type="FontFile" uid="uid://d1wvn8afyulp3" path="res://fonts/Roboto-BoldItalic.ttf" id="3_725vn"]
+[ext_resource type="PackedScene" uid="uid://blifju0wwvnj2" path="res://v1_1/graph_manager.tscn" id="1_iryew"]
+[ext_resource type="Texture2D" uid="uid://cvu8qu6j5pdm1" path="res://godette.png" id="2_5i12b"]
+[ext_resource type="FontFile" uid="uid://d1wvn8afyulp3" path="res://fonts/Roboto-BoldItalic.ttf" id="3_2766k"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hnycb"]
 bg_color = Color(0, 0, 0, 1)
@@ -18,111 +18,124 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 4
 
-[node name="Sin" parent="GridContainer" instance=ExtResource("1_sy0yg")]
+[node name="Abs" parent="GridContainer" instance=ExtResource("1_iryew")]
 layout_mode = 2
-Y_MIN = -1.25
-Y_MAX = 1.25
-SCALE_X = [-3.142, -1.571, 1.571, 3.142]
-metadata/_edit_vertical_guides_ = [480.0]
-metadata/_edit_horizontal_guides_ = [360.0]
-
-[node name="ceil" parent="GridContainer" instance=ExtResource("1_sy0yg")]
-layout_mode = 2
-f = "ceil(x)"
+f = "abs(x)"
 X_MIN = -3.5
 X_MAX = 3.5
 Y_MIN = -2.5
 Y_MAX = 2.5
-GRAPH_RESOLUTION = 2000
 SCALE_X = [-1.0, 1.0]
-metadata/_edit_vertical_guides_ = [480.0]
-metadata/_edit_horizontal_guides_ = [360.0]
-
-[node name="Min" parent="GridContainer" instance=ExtResource("1_sy0yg")]
-layout_mode = 2
-f = "min(0.5, x)"
-X_MIN = -1.75
-X_MAX = 1.75
-Y_MIN = -1.25
-Y_MAX = 1.25
-SCALE_X = [0.5]
-SCALE_Y = [0.5]
-metadata/_edit_vertical_guides_ = [480.0]
-metadata/_edit_horizontal_guides_ = [360.0]
-
-[node name="Lerp" parent="GridContainer" instance=ExtResource("1_sy0yg")]
-layout_mode = 2
-f = "lerp(-0.5,  0.5, x)"
-X_MIN = -1.75
-X_MAX = 1.75
-Y_MIN = -1.25
-Y_MAX = 1.25
-SCALE_X = [1.0]
-SCALE_Y = [-0.5, 0.5]
-metadata/_edit_vertical_guides_ = [480.0]
-metadata/_edit_horizontal_guides_ = [360.0]
-
-[node name="Cos" parent="GridContainer" instance=ExtResource("1_sy0yg")]
-layout_mode = 2
-f = "cos(x)"
-Y_MIN = -1.25
-Y_MAX = 1.25
-SCALE_X = [-3.142, -1.571, 1.571, 3.142]
-metadata/_edit_vertical_guides_ = [480.0]
-metadata/_edit_horizontal_guides_ = [360.0]
-
-[node name="Floor" parent="GridContainer" instance=ExtResource("1_sy0yg")]
-layout_mode = 2
-f = "floor(x)"
-X_MIN = -3.5
-X_MAX = 3.5
-Y_MIN = -2.5
-Y_MAX = 2.5
-GRAPH_RESOLUTION = 2000
-SCALE_X = [-1.0, 1.0]
-metadata/_edit_vertical_guides_ = [480.0]
-metadata/_edit_horizontal_guides_ = [360.0]
-
-[node name="Max" parent="GridContainer" instance=ExtResource("1_sy0yg")]
-layout_mode = 2
-f = "max(0.5, x)"
-X_MIN = -1.75
-X_MAX = 1.75
-SCALE_X = [0.5]
-SCALE_Y = [0.5]
-metadata/_edit_vertical_guides_ = [480.0]
-metadata/_edit_horizontal_guides_ = [360.0]
-
-[node name="InverseLerp" parent="GridContainer" instance=ExtResource("1_sy0yg")]
-layout_mode = 2
-f = "inverse_lerp(-0.5 ,0.5, x)"
-X_MIN = -1.75
-X_MAX = 1.75
-SCALE_X = [-0.5, 0.5]
 SCALE_Y = [1.0]
 metadata/_edit_vertical_guides_ = [480.0]
 metadata/_edit_horizontal_guides_ = [360.0]
 
-[node name="Tan" parent="GridContainer" instance=ExtResource("1_sy0yg")]
+[node name="LinearToDb" parent="GridContainer" instance=ExtResource("1_iryew")]
 layout_mode = 2
-f = "tan(x)"
-X_MIN = -5.386
-X_MAX = 5.386
-Y_MIN = -2.5
-Y_MAX = 2.5
-SCALE_X = [-3.142, -1.571, 1.571, 3.142]
+f = "linear_to_db(x)"
+POSITION_NORMAL = Vector2(0.072, 0.1)
+X_MIN = -0.1
+X_MAX = 1.2
+Y_MIN = -45.0
+Y_MAX = 5.0
+GRAPH_RESOLUTION = 2000
+SCALE_X = [1.0]
+SCALE_Y = []
 metadata/_edit_vertical_guides_ = [480.0]
 metadata/_edit_horizontal_guides_ = [360.0]
 
-[node name="Round" parent="GridContainer" instance=ExtResource("1_sy0yg")]
+[node name="FMod" parent="GridContainer" instance=ExtResource("1_iryew")]
 layout_mode = 2
-f = "round(x)"
+f = "fmod(x, 1.0)"
 X_MIN = -3.5
 X_MAX = 3.5
 Y_MIN = -2.5
 Y_MAX = 2.5
 GRAPH_RESOLUTION = 2000
 SCALE_X = [-1.0, 1.0]
+metadata/_edit_vertical_guides_ = [480.0]
+metadata/_edit_horizontal_guides_ = [360.0]
+
+[node name="SmoothStep" parent="GridContainer" instance=ExtResource("1_iryew")]
+layout_mode = 2
+f = "smoothstep(-1.0, 1.0, x)"
+X_MIN = -1.75
+X_MAX = 1.75
+Y_MIN = -1.25
+Y_MAX = 1.25
+SCALE_X = [-1.0, 1.0]
+SCALE_Y = [1.0]
+metadata/_edit_vertical_guides_ = [480.0]
+metadata/_edit_horizontal_guides_ = [360.0]
+
+[node name="Sign" parent="GridContainer" instance=ExtResource("1_iryew")]
+layout_mode = 2
+f = "sign(x)"
+X_MIN = -3.5
+X_MAX = 3.5
+Y_MIN = -2.5
+Y_MAX = 2.5
+GRAPH_RESOLUTION = 2000
+SCALE_X = [-1.0, 1.0]
+metadata/_edit_vertical_guides_ = [480.0]
+metadata/_edit_horizontal_guides_ = [360.0]
+
+[node name="PingPong" parent="GridContainer" instance=ExtResource("1_iryew")]
+layout_mode = 2
+f = "pingpong(x, 1.0)"
+X_MIN = -3.5
+X_MAX = 3.5
+Y_MIN = -2.5
+Y_MAX = 2.5
+GRAPH_RESOLUTION = 2000
+SCALE_X = [-1.0, 1.0, -2.0, 2.0]
+SCALE_Y = [1.0]
+metadata/_edit_vertical_guides_ = [480.0]
+metadata/_edit_horizontal_guides_ = [360.0]
+
+[node name="FPosMod" parent="GridContainer" instance=ExtResource("1_iryew")]
+layout_mode = 2
+f = "fposmod(x, 1.0)"
+X_MIN = -3.5
+X_MAX = 3.5
+Y_MIN = -2.5
+Y_MAX = 2.5
+GRAPH_RESOLUTION = 2000
+SCALE_X = [-1.0, 1.0]
+SCALE_Y = [1.0]
+metadata/_edit_vertical_guides_ = [480.0]
+metadata/_edit_horizontal_guides_ = [360.0]
+
+[node name="Randf" parent="GridContainer" instance=ExtResource("1_iryew")]
+layout_mode = 2
+f = "randf()"
+X_MIN = -1.75
+X_MAX = 1.75
+GRAPH_RESOLUTION = 50
+SCALE_X = []
+SCALE_Y = [1.0]
+metadata/_edit_vertical_guides_ = [480.0]
+metadata/_edit_horizontal_guides_ = [360.0]
+
+[node name="Asin" parent="GridContainer" instance=ExtResource("1_iryew")]
+layout_mode = 2
+f = "asin(x)"
+X_MIN = -1.75
+X_MAX = 1.75
+Y_MIN = -1.885
+Y_MAX = 1.885
+SCALE_X = [-1.0, 1.0]
+SCALE_Y = [-1.571, 1.571]
+metadata/_edit_vertical_guides_ = [480.0]
+metadata/_edit_horizontal_guides_ = [360.0]
+
+[node name="Rad2Deg" parent="GridContainer" instance=ExtResource("1_iryew")]
+layout_mode = 2
+f = "rad_to_deg(x)"
+Y_MIN = -225.0
+Y_MAX = 225.0
+SCALE_X = [-3.142, 3.142, -1.571, 1.571]
+SCALE_Y = [-180.0, -90.0, 90.0, 180.0]
 metadata/_edit_vertical_guides_ = [480.0]
 metadata/_edit_horizontal_guides_ = [360.0]
 
@@ -139,7 +152,7 @@ offset_top = -1.0
 offset_right = 1309.0
 offset_bottom = 789.0
 scale = Vector2(0.449414, 0.449414)
-texture = ExtResource("2_susy8")
+texture = ExtResource("2_5i12b")
 
 [node name="Label" type="Label" parent="GridContainer/Godette"]
 layout_mode = 0
@@ -149,8 +162,8 @@ offset_right = 679.0
 offset_bottom = 304.0
 theme_override_colors/font_color = Color(0.847059, 0.847059, 0.847059, 1)
 theme_override_constants/line_spacing = -18
-theme_override_fonts/font = ExtResource("3_725vn")
+theme_override_fonts/font = ExtResource("3_2766k")
 theme_override_font_sizes/font_size = 87
 text = "GodotEngine[4.1]
 built-in functions
-cheat sheet_1"
+cheat sheet_2"
