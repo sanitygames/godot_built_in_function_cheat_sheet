@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://blifju0wwvnj2"]
 
-[ext_resource type="Gradient" uid="uid://c3p57aekj237i" path="res://v1_1/gradient.tres" id="1_30sal"]
-[ext_resource type="FontFile" uid="uid://d1wvn8afyulp3" path="res://fonts/Roboto-BoldItalic.ttf" id="1_baom7"]
-[ext_resource type="Script" path="res://v1_1/graph_manager.gd" id="1_pwj53"]
-[ext_resource type="Environment" uid="uid://cutlchic5imiy" path="res://env.tres" id="4_ikh7f"]
+[ext_resource type="Script" path="res://graph/graph_manager.gd" id="1_7jtwn"]
+[ext_resource type="Gradient" uid="uid://c3p57aekj237i" path="res://graph/gradient.tres" id="2_st2e4"]
+[ext_resource type="FontFile" uid="uid://d1wvn8afyulp3" path="res://fonts/Roboto-BoldItalic.ttf" id="3_1ini4"]
+[ext_resource type="Environment" uid="uid://cutlchic5imiy" path="res://env.tres" id="4_sldyw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4oy40"]
 bg_color = Color(0, 0, 0, 0)
@@ -19,7 +19,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 480.0
 offset_bottom = 360.0
-script = ExtResource("1_pwj53")
+script = ExtResource("1_7jtwn")
 f = "sin(x)"
 X_MIN = -5.498
 X_MAX = 5.498
@@ -42,7 +42,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4oy40")
 [node name="Graph" type="Line2D" parent="Panel"]
 points = PackedVector2Array(0, 0, 120, 200, 270, 90, 440, 280)
 width = 5.0
-gradient = ExtResource("1_30sal")
+gradient = ExtResource("2_st2e4")
 joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 2
@@ -72,7 +72,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0.878431, 0.862745, 0.862745, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
-theme_override_fonts/font = ExtResource("1_baom7")
+theme_override_fonts/font = ExtResource("3_1ini4")
 theme_override_font_sizes/font_size = 9
 text = "12.345"
 horizontal_alignment = 1
@@ -104,7 +104,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0.878431, 0.862745, 0.862745, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
-theme_override_fonts/font = ExtResource("1_baom7")
+theme_override_fonts/font = ExtResource("3_1ini4")
 theme_override_font_sizes/font_size = 9
 text = "12.345"
 horizontal_alignment = 1
@@ -126,7 +126,7 @@ offset_bottom = 17.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.878431, 0.862745, 0.862745, 1)
-theme_override_fonts/font = ExtResource("1_baom7")
+theme_override_fonts/font = ExtResource("3_1ini4")
 theme_override_font_sizes/font_size = 12
 text = "0"
 vertical_alignment = 1
@@ -138,10 +138,10 @@ offset_top = 310.0
 offset_right = 460.0
 offset_bottom = 340.0
 theme_override_colors/font_color = Color(0.796078, 0.796078, 0.796078, 1)
-theme_override_fonts/font = ExtResource("1_baom7")
+theme_override_fonts/font = ExtResource("3_1ini4")
 theme_override_font_sizes/font_size = 28
 text = "placeholder_function(value_x, value_y, value_z)"
 metadata/_edit_lock_ = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource("4_ikh7f")
+environment = ExtResource("4_sldyw")

@@ -1,98 +1,135 @@
-[gd_scene load_steps=6 format=3 uid="uid://bf44asq6acmyb"]
+[gd_scene load_steps=5 format=3 uid="uid://c1qa4sn5hv4d7"]
 
-[ext_resource type="Environment" uid="uid://cutlchic5imiy" path="res://env.tres" id="1_f5qq1"]
-[ext_resource type="PackedScene" uid="uid://cnkkv6u7jdm3n" path="res://graph/graph_viewport_container.tscn" id="2_gy4ic"]
-[ext_resource type="Texture2D" uid="uid://cvu8qu6j5pdm1" path="res://godette.png" id="3_javju"]
-[ext_resource type="FontFile" uid="uid://d1wvn8afyulp3" path="res://fonts/Roboto-BoldItalic.ttf" id="4_2olkl"]
+[ext_resource type="PackedScene" uid="uid://blifju0wwvnj2" path="res://v1_1/graph_manager.tscn" id="1_sy0yg"]
+[ext_resource type="Texture2D" uid="uid://cvu8qu6j5pdm1" path="res://godette.png" id="2_susy8"]
+[ext_resource type="FontFile" uid="uid://d1wvn8afyulp3" path="res://fonts/Roboto-BoldItalic.ttf" id="3_725vn"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m4lo7"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hnycb"]
 bg_color = Color(0, 0, 0, 1)
 
-[node name="Page1" type="CanvasLayer"]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource("1_f5qq1")
+[node name="CanvasLayer" type="CanvasLayer"]
+layer = 0
 
 [node name="GridContainer" type="GridContainer" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 35.0
-offset_right = -35.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/h_separation = 30
-theme_override_constants/v_separation = 0
 columns = 4
 
-[node name="Sin" parent="GridContainer" instance=ExtResource("2_gy4ic")]
+[node name="Sin" parent="GridContainer" instance=ExtResource("1_sy0yg")]
 layout_mode = 2
-NAME = "sin"
-VALUE_MIN_X = -5.386
-VALUE_MAX_X = 5.386
-VALUE_MIN_Y = -1.25
-VALUE_MAX_Y = 1.25
-GRID_COLOR = Color(0.372549, 0.372549, 0.372549, 0.501961)
+Y_MIN = -1.25
+Y_MAX = 1.25
+SCALE_X = [-3.142, -1.571, 1.571, 3.142]
+metadata/_edit_vertical_guides_ = [480.0]
+metadata/_edit_horizontal_guides_ = [360.0]
 
-[node name="Ceili" parent="GridContainer" instance=ExtResource("2_gy4ic")]
+[node name="ceil" parent="GridContainer" instance=ExtResource("1_sy0yg")]
 layout_mode = 2
-NAME = "ceil"
+f = "ceil(x)"
+X_MIN = -3.5
+X_MAX = 3.5
+Y_MIN = -2.5
+Y_MAX = 2.5
+GRAPH_RESOLUTION = 2000
+SCALE_X = [-1.0, 1.0]
+metadata/_edit_vertical_guides_ = [480.0]
+metadata/_edit_horizontal_guides_ = [360.0]
 
-[node name="Min" parent="GridContainer" instance=ExtResource("2_gy4ic")]
+[node name="Min" parent="GridContainer" instance=ExtResource("1_sy0yg")]
 layout_mode = 2
-NAME = "min"
-VALUE_MIN_X = -1.75
-VALUE_MAX_X = 1.75
-VALUE_MIN_Y = -1.25
-VALUE_MAX_Y = 1.25
+f = "min(0.5, x)"
+X_MIN = -1.75
+X_MAX = 1.75
+Y_MIN = -1.25
+Y_MAX = 1.25
+SCALE_X = [0.5]
+SCALE_Y = [0.5]
+metadata/_edit_vertical_guides_ = [480.0]
+metadata/_edit_horizontal_guides_ = [360.0]
 
-[node name="Lerp" parent="GridContainer" instance=ExtResource("2_gy4ic")]
+[node name="Lerp" parent="GridContainer" instance=ExtResource("1_sy0yg")]
 layout_mode = 2
-NAME = "lerp"
-VALUE_MIN_X = -1.75
-VALUE_MAX_X = 1.75
-VALUE_MIN_Y = -1.25
-VALUE_MAX_Y = 1.25
+f = "lerp(-0.5,  0.5, x)"
+X_MIN = -1.75
+X_MAX = 1.75
+Y_MIN = -1.25
+Y_MAX = 1.25
+SCALE_X = [1.0]
+SCALE_Y = [-0.5, 0.5]
+metadata/_edit_vertical_guides_ = [480.0]
+metadata/_edit_horizontal_guides_ = [360.0]
 
-[node name="Cos" parent="GridContainer" instance=ExtResource("2_gy4ic")]
+[node name="Cos" parent="GridContainer" instance=ExtResource("1_sy0yg")]
 layout_mode = 2
-NAME = "cos"
-VALUE_MIN_X = -5.386
-VALUE_MAX_X = 5.386
-VALUE_MIN_Y = -1.25
-VALUE_MAX_Y = 1.25
-GRID_COLOR = Color(0.372549, 0.372549, 0.372549, 0.501961)
+f = "cos(x)"
+Y_MIN = -1.25
+Y_MAX = 1.25
+SCALE_X = [-3.142, -1.571, 1.571, 3.142]
+metadata/_edit_vertical_guides_ = [480.0]
+metadata/_edit_horizontal_guides_ = [360.0]
 
-[node name="Floor" parent="GridContainer" instance=ExtResource("2_gy4ic")]
+[node name="Floor" parent="GridContainer" instance=ExtResource("1_sy0yg")]
 layout_mode = 2
-NAME = "floor"
+f = "floor(x)"
+X_MIN = -3.5
+X_MAX = 3.5
+Y_MIN = -2.5
+Y_MAX = 2.5
+GRAPH_RESOLUTION = 2000
+SCALE_X = [-1.0, 1.0]
+metadata/_edit_vertical_guides_ = [480.0]
+metadata/_edit_horizontal_guides_ = [360.0]
 
-[node name="Max" parent="GridContainer" instance=ExtResource("2_gy4ic")]
+[node name="Max" parent="GridContainer" instance=ExtResource("1_sy0yg")]
 layout_mode = 2
-NAME = "max"
-VALUE_MIN_X = -1.75
-VALUE_MAX_X = 1.75
-VALUE_MIN_Y = -1.25
-VALUE_MAX_Y = 1.25
+f = "max(0.5, x)"
+X_MIN = -1.75
+X_MAX = 1.75
+SCALE_X = [0.5]
+SCALE_Y = [0.5]
+metadata/_edit_vertical_guides_ = [480.0]
+metadata/_edit_horizontal_guides_ = [360.0]
 
-[node name="InverseLerp" parent="GridContainer" instance=ExtResource("2_gy4ic")]
+[node name="InverseLerp" parent="GridContainer" instance=ExtResource("1_sy0yg")]
 layout_mode = 2
-NAME = "inverse_lerp"
-VALUE_MIN_X = -1.75
-VALUE_MAX_X = 1.75
-VALUE_MIN_Y = -1.25
-VALUE_MAX_Y = 1.25
+f = "inverse_lerp(-0.5 ,0.5, x)"
+X_MIN = -1.75
+X_MAX = 1.75
+SCALE_X = [-0.5, 0.5]
+SCALE_Y = [1.0]
+metadata/_edit_vertical_guides_ = [480.0]
+metadata/_edit_horizontal_guides_ = [360.0]
 
-[node name="Tan" parent="GridContainer" instance=ExtResource("2_gy4ic")]
+[node name="Tan" parent="GridContainer" instance=ExtResource("1_sy0yg")]
 layout_mode = 2
+f = "tan(x)"
+X_MIN = -5.386
+X_MAX = 5.386
+Y_MIN = -2.5
+Y_MAX = 2.5
+SCALE_X = [-3.142, -1.571, 1.571, 3.142]
+metadata/_edit_vertical_guides_ = [480.0]
+metadata/_edit_horizontal_guides_ = [360.0]
 
-[node name="Round" parent="GridContainer" instance=ExtResource("2_gy4ic")]
+[node name="Round" parent="GridContainer" instance=ExtResource("1_sy0yg")]
 layout_mode = 2
-NAME = "round"
+f = "round(x)"
+X_MIN = -3.5
+X_MAX = 3.5
+Y_MIN = -2.5
+Y_MAX = 2.5
+GRAPH_RESOLUTION = 2000
+SCALE_X = [-1.0, 1.0]
+metadata/_edit_vertical_guides_ = [480.0]
+metadata/_edit_horizontal_guides_ = [360.0]
 
 [node name="Godette" type="Panel" parent="GridContainer"]
+modulate = Color(0.835294, 0.835294, 0.835294, 1)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_m4lo7")
+theme_override_styles/panel = SubResource("StyleBoxFlat_hnycb")
 
 [node name="TextureRect" type="TextureRect" parent="GridContainer/Godette"]
 modulate = Color(0.847059, 0.847059, 0.847059, 1)
@@ -102,7 +139,7 @@ offset_top = -1.0
 offset_right = 1309.0
 offset_bottom = 789.0
 scale = Vector2(0.449414, 0.449414)
-texture = ExtResource("3_javju")
+texture = ExtResource("2_susy8")
 
 [node name="Label" type="Label" parent="GridContainer/Godette"]
 layout_mode = 0
@@ -112,7 +149,7 @@ offset_right = 679.0
 offset_bottom = 304.0
 theme_override_colors/font_color = Color(0.847059, 0.847059, 0.847059, 1)
 theme_override_constants/line_spacing = -18
-theme_override_fonts/font = ExtResource("4_2olkl")
+theme_override_fonts/font = ExtResource("3_725vn")
 theme_override_font_sizes/font_size = 87
 text = "GodotEngine[4.1]
 built-in functions
