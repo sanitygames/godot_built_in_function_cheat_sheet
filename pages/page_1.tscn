@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c1qa4sn5hv4d7"]
 
-[ext_resource type="PackedScene" uid="uid://blifju0wwvnj2" path="res://v1_1/graph_manager.tscn" id="1_sy0yg"]
+[ext_resource type="PackedScene" uid="uid://blifju0wwvnj2" path="res://graph/graph_manager.tscn" id="1_sy0yg"]
 [ext_resource type="Texture2D" uid="uid://cvu8qu6j5pdm1" path="res://godette.png" id="2_susy8"]
 [ext_resource type="FontFile" uid="uid://d1wvn8afyulp3" path="res://fonts/Roboto-BoldItalic.ttf" id="3_725vn"]
 
